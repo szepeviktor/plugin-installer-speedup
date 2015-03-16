@@ -17,6 +17,7 @@ Speed up plugin installation.
 * Dont't load featured plugins.
 * Make Search Plugins button visible.
 * Skip plugin install confirmation.
+* Admin menu link for Upload Plugin and Favorites
 
 No admin page for this plugin. Ready to go right after activation.
 

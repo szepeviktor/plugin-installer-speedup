@@ -19,6 +19,7 @@ if ( ! function_exists( 'add_filter' ) ) {
 
 add_filter( 'install_plugins_table_api_args_featured', 'o1_disable_featured_plugins_tab' );
 add_action( 'admin_enqueue_scripts', 'o1_plugin_speedup_script_styles' );
+add_action( 'admin_init', 'o1_plugin_speedup_upload_menu' );
 
 function o1_disable_featured_plugins_tab( $args ) {
 
@@ -43,4 +44,17 @@ function o1_plugin_speedup_script_styles( $hook ) {
         '1.0',
         true
     );
+}
+
+function o1_plugin_speedup_upload_menu() {
+
+    global $submenu;
+
+    if ( ! is_multisite() ) {
+        // hack into the Settings menu
+        $submenu['plugins.php'][11] = array( __( 'Upload Plugin' ),
+            'install_plugins', 'plugin-install.php?tab=upload' );
+        $submenu['plugins.php'][12] = array( _x( 'Favorites', 'Plugin Installer' ),
+            'install_plugins', 'plugin-install.php?tab=favorites' );
+    }
 }
