@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name: Plugin Installer Cleanup
+Plugin Name: Plugin Installer Speedup
 Version: 0.1
 Description: Speedups: dont't load featured plugins, make Search Plugins button visible, skip plugin install confirmation.
-Plugin URI: https://wordpress.org/plugins/plugin-install-cleanup/
+Plugin URI: https://wordpress.org/plugins/plugin-install-speedup/
 Author: Viktor Szépe
 Author URI: http://www.online1.hu/webdesign/
 License: GNU General Public License (GPL) version 2
-GitHub Plugin URI: https://github.com/szepeviktor/plugin-install-cleanup
+GitHub Plugin URI: https://github.com/szepeviktor/plugin-install-speedup
 */
 
 if ( ! function_exists( 'add_filter' ) ) {
@@ -18,14 +18,14 @@ if ( ! function_exists( 'add_filter' ) ) {
 }
 
 add_filter( 'install_plugins_table_api_args_featured', 'o1_disable_featured_plugins_tab' );
-add_action( 'admin_enqueue_scripts', 'o1_plugin_cleanup_script_styles' );
+add_action( 'admin_enqueue_scripts', 'o1_plugin_speedup_script_styles' );
 
 function o1_disable_featured_plugins_tab( $args ) {
 
     return false;
 }
 
-function o1_plugin_cleanup_script_styles( $hook ) {
+function o1_plugin_speedup_script_styles( $hook ) {
 
     if ( 'plugin-install.php' !== $hook ) {
         return;
@@ -37,8 +37,8 @@ function o1_plugin_cleanup_script_styles( $hook ) {
 
     // no inline scripting in WP
     wp_enqueue_script(
-        'plugin-install-cleanup',
-        plugin_dir_url( __FILE__ ) . 'js/plugin-install-cleanup.js',
+        'plugin-install-speedup',
+        plugin_dir_url( __FILE__ ) . 'js/plugin-install-speedup.js',
         array( 'jquery' ),
         '1.0',
         true

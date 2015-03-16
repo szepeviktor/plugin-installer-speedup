@@ -1,4 +1,4 @@
-=== Plugin Installer Cleanup ===
+=== Plugin Installer Speedup ===
 Contributors: szepe.viktor
 Donate link: https://szepe.net/wp-donate/
 Tags: developer, development, plugin, installation, bulk, fast, speed, admin
@@ -24,7 +24,7 @@ No admin page for this plugin. Ready to go right after activation.
 
 This section describes how to install the plugin and get it working.
 
-1. Upload `plugin-install-cleanup.php` to the `/wp-content/plugins/` directory
+1. Upload `plugin-install-speedup.php` and the `js` folder to the `/wp-content/plugins/plugin-install-speedup/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
