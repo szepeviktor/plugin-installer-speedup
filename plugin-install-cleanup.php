@@ -10,6 +10,13 @@ License: GNU General Public License (GPL) version 2
 GitHub Plugin URI: https://github.com/szepeviktor/plugin-install-cleanup
 */
 
+if ( ! function_exists( 'add_filter' ) ) {
+    ob_get_level() && ob_end_clean();
+    header( 'Status: 403 Forbidden' );
+    header( 'HTTP/1.1 403 Forbidden' );
+    exit();
+}
+
 add_filter( 'install_plugins_table_api_args_featured', 'o1_disable_featured_plugins_tab' );
 add_action( 'admin_enqueue_scripts', 'o1_plugin_cleanup_script_styles' );
 
@@ -24,9 +31,11 @@ function o1_plugin_cleanup_script_styles( $hook ) {
         return;
     }
 
-    $style = '.plugin-install-php #search-submit { clip:auto; height:28px; position:static; vertical-align:baseline; width:auto; }';
+    $style = '.plugin-install-php #search-submit { clip:auto; height:28px;
+        position:static; vertical-align:baseline; width:auto; }';
     wp_add_inline_style( 'wp-admin', $style );
 
+    // no inline scripting in WP
     wp_enqueue_script(
         'plugin-install-cleanup',
         plugin_dir_url( __FILE__ ) . 'js/plugin-install-cleanup.js',
