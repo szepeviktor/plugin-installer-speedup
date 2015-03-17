@@ -3,11 +3,11 @@
 Plugin Name: Plugin Installer Speedup
 Version: 0.1
 Description: Speedups: dont't load featured plugins, make Search Plugins button visible, skip plugin install confirmation.
-Plugin URI: https://wordpress.org/plugins/plugin-install-speedup/
+Plugin URI: https://wordpress.org/plugins/plugin-installer-speedup/
 Author: Viktor Szépe
 Author URI: http://www.online1.hu/webdesign/
 License: GNU General Public License (GPL) version 2
-GitHub Plugin URI: https://github.com/szepeviktor/plugin-install-speedup
+GitHub Plugin URI: https://github.com/szepeviktor/plugin-installer-speedup
 */
 
 if ( ! function_exists( 'add_filter' ) ) {
@@ -38,8 +38,8 @@ function o1_plugin_speedup_script_styles( $hook ) {
 
     // no inline scripting in WP
     wp_enqueue_script(
-        'plugin-install-speedup',
-        plugin_dir_url( __FILE__ ) . 'js/plugin-install-speedup.js',
+        'plugin-installer-speedup',
+        plugin_dir_url( __FILE__ ) . 'js/plugin-installer-speedup.js',
         array( 'jquery' ),
         '1.0',
         true
