@@ -19,7 +19,6 @@ Speed up plugin installation.
 * Set focus to search field
 * Skip plugin install confirmation.
 * Admin menu under "Plugins" for Upload Plugin and Favorites
-* Install plugin from URL
 * Admin bar menu in "+ New"
 
 No admin page for this plugin. Ready to go right after activation.
@@ -43,7 +42,6 @@ Yes it is. You can easily install any plugin in two seconds.
 
 = 0.2 =
 * Set focus to search field
-* Install plugin from URL
 * Admin bar menu in "+ New"
 
 = 0.1 =
