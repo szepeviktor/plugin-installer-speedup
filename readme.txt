@@ -25,6 +25,9 @@ No admin page for this plugin. Ready to go right after activation.
 
 [GitHub repo](https://github.com/szepeviktor/plugin-installer-speedup)
 
+The feature of plugin upload from URL has been moved to a
+[MU plugin](https://github.com/szepeviktor/wordpress-plugin-construction/blob/master/mu-plugin-upload-from-url/plugin-upload-from-url.php).
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
