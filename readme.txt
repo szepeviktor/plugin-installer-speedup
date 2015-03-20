@@ -1,7 +1,7 @@
 === Plugin Installer Speedup ===
-Contributors: szepe.viktor
+Contributors: szepe.viktor, ipstenu
 Donate link: https://szepe.net/wp-donate/
-Tags: developer, development, upload, plugin, upload-plugin, installation, bulk, fast, speed, admin
+Tags: administration, installation, upload plugins
 Requires at least: 4.0
 Tested up to: 4.1.1
 Stable tag: 0.2
