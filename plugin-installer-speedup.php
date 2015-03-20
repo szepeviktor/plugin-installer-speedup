@@ -80,12 +80,10 @@ class O1_Plugin_Speedups {
     }
 
     public function hook_modify_source() {
-error_log('H1');
 
         if ( 'upload-plugin' !== $_GET['action'] ) {
             return;
         }
-error_log('H2');
 
         // Remove "-master" from GitHub URL-s
         add_filter( 'upgrader_source_selection', array( $this, 'remove_github_master' ), 9, 3 );
