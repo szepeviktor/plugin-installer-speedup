@@ -3,8 +3,8 @@ Contributors: szepe.viktor
 Donate link: https://szepe.net/wp-donate/
 Tags: administration, installation, upload plugins
 Requires at least: 4.0
-Tested up to: 4.1.1
-Stable tag: 0.2
+Tested up to: 4.2.2
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,6 +42,9 @@ This section describes how to install the plugin and get it working.
 Yes it is. You can easily install any plugin in two seconds.
 
 == Changelog ==
+
+= 0.2.1 =
+* Mika removed
 
 = 0.2 =
 * Set focus to search field
