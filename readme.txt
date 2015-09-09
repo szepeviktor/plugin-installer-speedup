@@ -18,8 +18,8 @@ Speed up plugin installation.
 * Make Search Plugins button visible.
 * Set focus to search field.
 * Skip plugin install confirmation.
-* Admin menu under "Plugins" for Upload Plugin and Favorites.
-* Admin bar menu in "+ New".
+* Add admin menu items under "Plugins" for Upload Plugin and Favorites.
+* Add admin bar menu item under "+ New".
 
 No admin page for this plugin. Ready to go right after activation.
 
