@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Plugin Installer Speedup
-Version: 0.2.1
+Version: 0.2.2
 Description: Speedups: dont't load featured plugins, make Search Plugins button visible, skip plugin install confirmation.
 Plugin URI: https://wordpress.org/plugins/plugin-installer-speedup/
 Author: Viktor Szépe
@@ -37,17 +37,17 @@ class O1_Plugin_Speedups {
             return;
         }
 
-        $style = '.plugin-install-php #search-submit { clip:auto; height:28px;
-            position:static; vertical-align:baseline; width:auto; }';
+        $style = '.plugin-install-php #search-submit { display: inline-block;
+            clip:auto; height:28px; position:static; vertical-align:baseline;
+            width:auto; }';
 
         wp_add_inline_style( 'wp-admin', $style );
 
-        // No inline scripting in WP
         wp_enqueue_script(
             'plugin-installer-speedup',
             plugin_dir_url( __FILE__ ) . 'js/installer.js',
             array( 'jquery' ),
-            '1.0',
+            '1.0.1',
             true
         );
     }
@@ -58,10 +58,16 @@ class O1_Plugin_Speedups {
 
         if ( ! is_multisite() ) {
             // Hack into the Settings menu
-            $submenu['plugins.php'][9] = array( _x( 'Favorites', 'Plugin Installer' ),
-                'install_plugins', 'plugin-install.php?tab=favorites' );
-            $submenu['plugins.php'][11] = array( __( 'Upload Plugin' ),
-                'install_plugins', 'plugin-install.php?tab=upload' );
+            $submenu['plugins.php'][9] = array(
+                _x( 'Favorites', 'Plugin Installer' ),
+                'install_plugins',
+                'plugin-install.php?tab=favorites',
+            );
+            $submenu['plugins.php'][11] = array(
+                __( 'Upload Plugin' ),
+                'install_plugins',
+                'plugin-install.php?tab=upload',
+            );
             ksort( $submenu['plugins.php'] );
         }
     }
@@ -73,8 +79,8 @@ class O1_Plugin_Speedups {
         $wp_admin_bar->add_menu( array(
             'parent'    => 'new-content',
             'id'        => 'plugin-install',
-            'title'     => __('Plugin'),
-            'href'      => self_admin_url( 'plugin-install.php' )
+            'title'     => __( 'Plugin' ),
+            'href'      => self_admin_url( 'plugin-install.php' ),
         ) );
 
     }
