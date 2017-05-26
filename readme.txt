@@ -45,7 +45,7 @@ Yes it is. You can easily install any plugin in two seconds.
 == Changelog ==
 
 = 0.2.2 =
-* Make search visible again
+* Make search button visible again
 * WordPress 4.7.1 compatibility
 * Document "-master" feature
 
